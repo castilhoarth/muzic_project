@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"></head>
+    <title> Muzic. - Cadastro </title>
+  </head>
+  <link rel="stylesheet" href="../w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="text/javascript">
+
+  function valida(){
+  vazio=false;
+    if(document.Cadastro.nome_formacao.value==""){
+      alert("O campo 'Formação' deve ser preenchido.");
+      vazio=true;
+    }
+    if(document.Cadastro.instituicao.value==""){
+      alert("O campo 'Instituição' social deve ser preenchido.");
+      vazio=true;
+    }
+    if(document.Cadastro.tipo_curso.value==""){
+      alert("O campo 'Tipo de formação' deve ser especificado.");
+      vazio=true;
+    }
+    if(document.Cadastro.dt_inicio.value==""){
+      alert("O campo 'Data de Início' deve ser preenchido.");
+      vazio=true;
+    }
+    if(document.Cadastro.dt_termino.value==""){
+      alert("O campo 'Data de Término' deve ser preenchido.");
+      vazio=true;
+    }
+    if( Date(document.Cadastro.dt_inicio.value) < Date(document.Cadastro.dt_termino.value)) {
+      alert("Ordem inválida selecionada.");
+      vazio=true;
+    }
+    if(vazio==false) document.Cadastro.submit();
+  }
+</script>
+
+  <body>
+  <div class="w3-top">
+
+    <div class="w3-bar w3-black w3-card" id="myNavbar">
+      <a href="/o php modificado/login1.php" class="w3-bar-item w3-button w3-wide">MUZIC.</a>
+      <div class="w3-right w3-hide-small">
+        <button class="w3-bar-item w3-button"><i class="fa fa-search"></i> PESQUISAR </button>
+        <a href="#about" class="w3-bar-item w3-button w3-wide">ABOUT.</a>
+      </div>
+    </div>
+
+    </div> 
+    <header><h1 style="margin-top: 5%; margin-left: 45%"> Cadastro de Formação </h1></header>
+       
+    <div style="margin-left: 15%" class="w3-twothird">
+      <form action="cadFormacao.php" name="Cadastro" method="POST">
+        <div class="w3-container m2 w3-padding-16 w3-border-deep-purple w3-border">
+          <p> Digite sua formação: </p>
+          <p><input class="w3-input w3-border w3-padding-16" type="text" placeholder="Ex.: Violão Clássico" name="nome_formacao"></p>
+        </div>
+
+        <div class="w3-container m2 w3-padding-16 w3-border-deep-purple w3-border">
+          <p> Digite a instituição na qual você se formou: </p>
+          <p><input class="w3-input w3-border w3-padding-16" type="text" placeholder="Ex.: Belas Artes" name="instituicao"></p>
+        </div>
+
+        <div class="w3-container m2 w3-padding-16 w3-border-deep-purple w3-border">
+          <p>Tipo de formação:</p>
+          <div class="w3-container">
+            <input class="w3-radio" type="radio" name="tipo_curso" value="Graduação"> Graduação
+            <input class="w3-radio" type="radio" name="tipo_curso" value="Licenciatura"> Licenciatura
+            <input class="w3-radio" type="radio" name="tipo_curso" value="Bacharelado"> Bacharelado
+          </div>
+        </div>
+      
+        
+<div class="w3-container m2 w3-padding-16 w3-border-deep-purple w3-border">
+          <p>Data de início:</p>
+          <p><input class="w3-input w3-border w3-padding-16" type="date" placeholder="Ex.: 01/04/1964" name="dt_inicio"></p>
+        </div>
+
+        <div class="w3-container m2 w3-padding-16 w3-border-deep-purple w3-border">
+          <p>Data de término:</p>
+          <p><input class="w3-input w3-border w3-padding-16" type="date" placeholder="Ex.: 01/04/1964" name="dt_termino"></p>
+        </div>
+        
+        <div class="w3-container m2 w3-padding-32">
+          <input type="button" class="w3-button w3-hover-deep-purple" onclick="valida()" name="continuar" value="Continuar">
+        </div>
+
+      </form>
+    </div>
+
+  </body>
+</html>

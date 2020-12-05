@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"></head>
+    <title> Muzic. - Cadastro </title>
+    <link rel="stylesheet" href="../w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <script type="text/javascript">
+
+    function valida(){
+    vazio=false;
+      if(document.Cadastro.descricao.value==""){
+        alert("Vai lá, escreve alguma coisa sobre você!");
+        vazio=true;
+      }
+      if(document.Cadastro.descricao.length <= 10 ){
+        alert("Escreve um pouco mais, poxa");
+        vazio=true;
+      }
+
+      if(vazio==false) document.Cadastro.submit();
+    }
+  </script>
+  <body>
+  <div class="w3-top">
+
+    <div class="w3-bar w3-black w3-card" id="myNavbar">
+      <a href="/o php modificado/login1.php" class="w3-bar-item w3-button w3-wide">MUZIC.</a>
+      <div class="w3-right w3-hide-small">
+        <button class="w3-bar-item w3-button"><i class="fa fa-search"></i> PESQUISAR </button>
+        <a href="#about" class="w3-bar-item w3-button w3-wide">ABOUT.</a>
+      </div>
+    </div>
+
+    </div> 
+    <header><h1 style="margin-top: 5%; margin-left: 15%"> Cadastro de Descrição </h1></header>
+       
+    <div style="margin-left: 15%" class="w3-twothird">
+      <form action="cadDescricao.php" name="Cadastro" method="POST">
+        <div class="w3-container m2 w3-padding-16 w3-border-deep-purple w3-border">
+          <p> Nos conte um pouco sobre você: </p>
+          <p><textarea rows="4" cols="50" placeholder="max. 400 caracteres" maxlength="400" class="w3-input" name="descricao"></textarea>
+        </div>
+
+        <div class="w3-container m2 w3-padding-32">
+          <input type="button" class="w3-button w3-hover-deep-purple" onclick="valida()" name="continuar" value="Continuar">
+        </div>
+
+      </form>
+    </div>
+
+  </body>
+</html>

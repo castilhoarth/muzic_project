@@ -1,0 +1,53 @@
+      .w3-bar .w3-button {
+        padding: 16px;
+        }
+       #img_div{
+        width: 80%;
+        padding: 5px;
+        margin: 15px auto;
+        border: 1px solid #cbcbcb;
+       }
+       #img_div:after{
+        content: "";
+        display: block;
+        clear: both;
+       }
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("/Principal/Background.jpg");
+        min-height: 100%;
+    }.bgimg-2 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("/Principal/Background.jpg");
+        min-height: 100%;
+    }
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+    .elephant {
+        font-family: Simplifica;
+        font-weight: 5px;
+        font-size: 64px;
+      }
+    @font-face {
+        font-family: Simplifica;
+        src: url(/Fontes/SIMPLIFICATypeface.ttf);
+    }
+    @font-face {
+      font-family: Prime;
+      src: url(/Fontes/PrimeRegular.otf);
+    }
+    @font-face {
+      font-family: Light;
+      src: url(/Fontes/PrimeLight.otf);
+    }
+    .resPesq {
+      font-family: Prime;
+      font-size: 16px;
+    }
+    .divAlign {
+      text-align: center;
+      margin-top: 3%;
+    }
